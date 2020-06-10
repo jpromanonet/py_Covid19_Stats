@@ -2,6 +2,7 @@
 
 ## python -m pip install COVID19py
 ## python -m pip install matplotlib
+## python -m pip install requests
 
 # Now we import the libraries
 
