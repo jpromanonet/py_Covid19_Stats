@@ -5,13 +5,21 @@
 
 # Now we import the libraries
 
-import COVID19py
+import COVID19Py
 import matplotlib.pyplot as mpl
 
 # Declaring and assigning variables
 
-covid19 = COVID19py.COVID19()
+covid19 = COVID19Py.COVID19()
 data = covid19.getAll(timelines=True)
 virusdetails = dict(data["latest"])
 names = list(virusdetails.keys())
 values = list(virusdetails.values())
+
+# Now we add the matplotlib magic!
+
+mpl.bar(range(len(virusdetails)),values, tick_label = names)
+mpl.show()
+
+# Now we print the virus details
+print(virusdetails)
